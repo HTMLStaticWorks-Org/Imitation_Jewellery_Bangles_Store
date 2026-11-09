@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Lustre Lane imitation jewellery and bangles boutique">
+  <title>Sign up | Lustre Lane</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <div class="auth-page">
+    <div class="auth-nav">
+      <a href="index.html" class="auth-back-link">← Back to store</a>
+      <div class="navtools">
+        <button class="iconbtn" onclick="toggleRTL()" data-rtl-label>RTL</button>
+        <button class="iconbtn" onclick="toggleTheme()" aria-label="Toggle theme" data-theme-icon>☾</button>
+      </div>
+    </div>
+
+    <div class="auth-center">
+      <div class="auth-brand-logo">
+        <a class="logo" href="index.html">
+          <img src="assets/favicon.svg" alt="Lustre Lane logo" class="brandlogo">Lustre <span>Lane.</span>
+        </a>
+      </div>
+
+      <div class="formwrap" style="margin:0 auto;">
+        <span class="eyebrow" style="margin-bottom:8px;">Join Lustre Lane</span>
+        <h2>Create your account</h2>
+        <form data-demo>
+          <div class="field">
+            <label>Full name</label>
+            <input required placeholder="Your full name">
+          </div>
+          <div class="field">
+            <label>Email address</label>
+            <input type="email" required placeholder="you@example.com">
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <div class="passwordbox">
+              <input type="password" required minlength="6" placeholder="Enter password (min 6 characters)">
+              <button type="button" class="eye" aria-label="Show password">◉</button>
+            </div>
+          </div>
+          <div class="field">
+            <label>Confirm password</label>
+            <div class="passwordbox">
+              <input type="password" required minlength="6" placeholder="Re-enter password">
+              <button type="button" class="eye" aria-label="Show password">◉</button>
+            </div>
+          </div>
+          <div class="formrow">
+            <label><input type="checkbox" required> I agree to the terms and privacy policy</label>
+          </div>
+          <button class="btn">Create account</button>
+          <div class="notice"></div>
+        </form>
+        <div class="formnote">Already have an account? <a href="login.html">Sign in</a></div>
+      </div>
+    </div>
+
+    <div class="auth-footer">
+      © 2026 Lustre Lane. Demo storefront template.
+    </div>
+  </div>
+</body>
+</html>
