@@ -17,6 +17,15 @@
       <a class="logo" href="index.html">
         <img src="assets/favicon.svg" alt="Lustre Lane logo" class="brandlogo">Lustre <span>Lane.</span>
       </a>
+
+      <!-- Hamburger Menu Toggle (Point 19) -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Navlinks: Removed Account page link (Point 1) -->
       <nav class="navlinks">
         <a class="" href="index.html">Home1</a>
         <a class="active" href="home2.html">Home2</a>
@@ -24,8 +33,8 @@
         <a class="" href="collections.html">Collections</a>
         <a class="" href="about.html">About</a>
         <a class="" href="contact.html">Contact</a>
-        <a href="login.html">Account</a>
       </nav>
+
       <div class="navtools">
         <button class="iconbtn" onclick="toggleRTL()" data-rtl-label>RTL</button>
         <button class="iconbtn" onclick="toggleTheme()" aria-label="Toggle theme" data-theme-icon>☾</button>
@@ -35,11 +44,13 @@
   </header>
 
   <main>
+    <!-- Hero Section with enriched story lines (Point 9) -->
     <section class="container hero">
       <div>
         <span class="eyebrow">The art of accessorising</span>
         <h1>Tradition, with a <span style="color:var(--brand)">fresh twist.</span></h1>
-        <p>Meet your new favourite jewellery destination. Explore expressive colours, delicate textures and bangles that bring your outfit together.</p>
+        <p>Meet your new favourite jewellery destination. We celebrate the beauty of handcrafted heritage jewellery reimagined for modern wardrobes—from subtle everyday accents to lavish statement pieces that complete your festive presence.</p>
+        <p style="color:var(--muted);font-size:14px;line-height:1.7;margin-top:-6px;">Hand-selected brass cores · Hypoallergenic micron plating · Handcrafted by master artisans</p>
         <div class="heroactions">
           <a class="btn" href="collections.html">Explore the edits</a>
           <a class="btn alt" href="shop.html">Shop bestsellers</a>
@@ -48,136 +59,167 @@
       <img class="heroimg" style="border-radius:20px 45% 20px 20px" src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=85" alt="Statement imitation jewellery">
     </section>
 
+    <!-- Editorial Story Showcase with additional narrative lines (Point 9) -->
     <section class="section container">
       <div class="sectionhead">
         <span class="eyebrow">Curated for your calendar</span>
         <h2>Dress the moment</h2>
-        <p>From everyday elegance to festive celebrations.</p>
+        <p>Jewellery that transitions effortlessly between boardrooms, festive brunches and midnight celebrations.</p>
       </div>
       <div class="contentgrid">
-        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=85" alt="Minimal jewellery">
+        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=85" alt="Minimal everyday jewellery">
         <div class="copy">
-          <h2 style="font:600 34px 'Playfair Display'">Everyday, elevated.</h2>
-          <p>Subtle sparkle, graceful silhouettes and lightweight favourites that move effortlessly from workdays to evenings.</p>
-          <a class="btn" href="shop.html">Shop everyday styles</a>
+          <h2>Everyday, elevated.</h2>
+          <p>Subtle sparkle, graceful silhouettes and feather-light favourites that move effortlessly from 9 AM meetings to dinner with close friends.</p>
+          <p>Each lightweight piece is engineered with tarnish-resistant protective layers and skin-safe clasps, offering the grandeur of real gold with the effortless freedom of everyday wear.</p>
+          <a class="btn" href="shop.html">Shop everyday styles →</a>
         </div>
         <div class="copy">
-          <h2 style="font:600 34px 'Playfair Display'">Made for the occasion.</h2>
-          <p>Bring your celebration look to life with rich tones, statement details and bangles that deserve their own spotlight.</p>
-          <a class="btn" href="collections.html">Shop occasionwear</a>
+          <h2>Made for the celebration.</h2>
+          <p>Bring your celebration look to life with rich jewel tones, intricate filigree detailing and stackable bangles that deserve their own spotlight.</p>
+          <p>Inspired by heritage royal courts of Jaipur and Mysore, our celebration edit brings regal charm to weddings, sangeets and anniversaries.</p>
+          <a class="btn" href="collections.html">Shop occasionwear →</a>
         </div>
-        <img src="https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&fit=crop&w=1000&q=85" alt="Festive bangles and jewellery">
+        <img src="https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&fit=crop&w=1000&q=85" alt="Festive celebration jewellery">
       </div>
     </section>
 
+    <!-- REPLACEMENT SECTION 1 (Point 8): The Occasion Lookbook & Styling Studio -->
     <section class="section" style="background:var(--soft)">
       <div class="container">
         <div class="sectionhead">
-          <span class="eyebrow">The signature selection</span>
-          <h2>Pieces to keep close</h2>
-          <p>Hand-crafted imitation jewels for every celebration.</p>
+          <span class="eyebrow">Occasion styling guide</span>
+          <h2>Curated lookbooks for every celebration</h2>
+          <p>Step-by-step styling recommendations thoughtfully put together by our resident jewellery designers.</p>
+        </div>
+        <div class="categories">
+          <div class="category">
+            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1000&q=85" alt="Bridal Sangeet Glamour">
+            <div>
+              <h3>Bridal Sangeet Glamour</h3>
+              <p>Statement polki chokers paired with chandelier earrings and matching floral haathphool for dancing through the night.</p>
+              <a class="card-cta" href="collections.html">View style guide →</a>
+            </div>
+          </div>
+
+          <div class="category">
+            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=85" alt="Workday Minimalist Gold">
+            <div>
+              <h3>Workday Minimalist Gold</h3>
+              <p>Clean geometric hoops, delicate pendant chains and slim anti-tarnish bangles that provide subtle professional refinement.</p>
+              <a class="card-cta" href="shop.html">View style guide →</a>
+            </div>
+          </div>
+
+          <div class="category">
+            <img src="https://images.unsplash.com/photo-1576053139778-7e32f2ae3cfd?auto=format&fit=crop&w=1000&q=85" alt="Cocktail & Evening Soirée">
+            <div>
+              <h3>Cocktail & Evening Soirée</h3>
+              <p>Contemporary rose gold cuff bracelets, ruby-toned solitaires and asymmetric drop earrings for western evening silhouettes.</p>
+              <a class="card-cta" href="collections.html">View style guide →</a>
+            </div>
+          </div>
+
+          <div class="category">
+            <img src="https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?auto=format&fit=crop&w=1000&q=85" alt="Festive Mehendi Glow">
+            <div>
+              <h3>Festive Mehendi Glow</h3>
+              <p>Sun-drenched yellow gold temple charms, lightweight layered glass bangles and pearl studs built for celebratory joy.</p>
+              <a class="card-cta" href="collections.html">View style guide →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REPLACEMENT SECTION 2 (Point 8): The Art of Imitation Karigari (Artisan Craftsmanship) -->
+    <section class="section container">
+      <div class="sectionhead">
+        <span class="eyebrow">Master craftsmanship</span>
+        <h2>The art of imitation karigari</h2>
+        <p>Discover the time-tested techniques and rigorous quality benchmarks behind every Lustre Lane treasure.</p>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <div class="emoji icon-style-1">✦</div>
+          <h3>Hand-Carved Brass Core</h3>
+          <p>Every piece starts with recycled eco-brass molds carved by master artisans to achieve razor-sharp detail and balanced weight.</p>
+        </div>
+        <div class="feature">
+          <div class="emoji icon-style-2">❖</div>
+          <h3>24K Micron Gold Dip</h3>
+          <p>Triple-layer electroplating with genuine 24-karat gold finish guarantees rich tonal warmth without greening skin or flaking.</p>
+        </div>
+        <div class="feature">
+          <div class="emoji icon-style-3">◈</div>
+          <h3>Prong & Bezel Stone Setting</h3>
+          <p>Each glass kundan, faux polki and simulated pearl is individually set by hand with traditional foil backings for authentic sparkle.</p>
+        </div>
+        <div class="feature">
+          <div class="emoji icon-style-4">🛡</div>
+          <h3>Hypoallergenic Barrier</h3>
+          <p>100% nickel-free and lead-free protective resin seals every piece to ensure comfortable all-day wear on delicate skin types.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REPLACEMENT SECTION 3 (Point 8): Curated Bangle Stacking Bundles with Bundle CTAs -->
+    <section class="section" style="background:var(--soft)">
+      <div class="container">
+        <div class="sectionhead">
+          <span class="eyebrow">Signature sets</span>
+          <h2>Curated bangle stacking bundles</h2>
+          <p>Pre-styled combinations designed to take the guesswork out of building the ultimate wrist stack.</p>
         </div>
         <div class="products">
           <article class="product">
-            <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1000&q=85" alt="Rose Gold Kundan Set">
+            <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1000&q=85" alt="The Royal Rani Stack">
             <div class="productbody">
-              <span class="tag">Bestseller</span>
-              <h3>Rose Gold Kundan Set</h3>
-              <p>Hand-finished imitation jewellery with radiant stones.</p>
+              <span class="tag">Complete Set (8 Pcs)</span>
+              <h3>The Royal Rani Stack</h3>
+              <p>Gold filigree kadas, ruby glass bangles and hand-painted meenakari spacers.</p>
               <div class="productfoot">
-                <span class="price">₹1,299</span>
-                <a class="textlink" href="contact.html">Enquire ↗</a>
+                <span class="price">₹1,799</span>
+                <a class="textlink" href="contact.html">Order bundle ↗</a>
               </div>
             </div>
           </article>
 
           <article class="product">
-            <img src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?auto=format&fit=crop&w=1000&q=85" alt="Pearl Bloom Bangles">
+            <img src="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&w=1000&q=85" alt="The Minimalist Pearl Duo">
             <div class="productbody">
-              <span class="tag">Bestseller</span>
-              <h3>Pearl Bloom Bangles</h3>
-              <p>Hand-finished imitation jewellery with freshwater pearl accents.</p>
+              <span class="tag">Pair (2 Pcs)</span>
+              <h3>The Minimalist Pearl Duo</h3>
+              <p>Openable wire bangles with natural freshwater imitation pearl clusters.</p>
               <div class="productfoot">
-                <span class="price">₹799</span>
-                <a class="textlink" href="contact.html">Enquire ↗</a>
+                <span class="price">₹899</span>
+                <a class="textlink" href="contact.html">Order bundle ↗</a>
               </div>
             </div>
           </article>
 
           <article class="product">
-            <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=1000&q=85" alt="Temple Charm Earrings">
+            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=85" alt="Velvet & Metallic Fusion">
             <div class="productbody">
-              <span class="tag">Bestseller</span>
-              <h3>Temple Charm Earrings</h3>
-              <p>Classic antique gold finish with intricate motifs.</p>
+              <span class="tag">Stack (12 Pcs)</span>
+              <h3>Velvet & Metallic Fusion</h3>
+              <p>Textured matte velvet finish bangles bordered by ornate gold kadas.</p>
               <div class="productfoot">
-                <span class="price">₹649</span>
-                <a class="textlink" href="contact.html">Enquire ↗</a>
+                <span class="price">₹1,199</span>
+                <a class="textlink" href="contact.html">Order bundle ↗</a>
               </div>
             </div>
           </article>
 
           <article class="product">
-            <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=1000&q=85" alt="Blush Stone Bracelet">
+            <img src="https://images.unsplash.com/photo-1576053139778-7e32f2ae3cfd?auto=format&fit=crop&w=1000&q=85" alt="The Temple Chooda Edit">
             <div class="productbody">
-              <span class="tag">Bestseller</span>
-              <h3>Blush Stone Bracelet</h3>
-              <p>Dainty charm and soft rose glow for stacking.</p>
+              <span class="tag">Festive Box (16 Pcs)</span>
+              <h3>The Temple Chooda Edit</h3>
+              <p>Traditional antique gold bangles with auspicious coin and deity motifs.</p>
               <div class="productfoot">
-                <span class="price">₹549</span>
-                <a class="textlink" href="contact.html">Enquire ↗</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="product">
-            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=85" alt="Classic Polki Choker">
-            <div class="productbody">
-              <span class="tag">Bestseller</span>
-              <h3>Classic Polki Choker</h3>
-              <p>Royal celebratory craftsmanship for weddings.</p>
-              <div class="productfoot">
-                <span class="price">₹1,899</span>
-                <a class="textlink" href="contact.html">Enquire ↗</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="product">
-            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=85" alt="Golden Glass Bangles">
-            <div class="productbody">
-              <span class="tag">Bestseller</span>
-              <h3>Golden Glass Bangles</h3>
-              <p>Shimmering traditional bangles set in gold hues.</p>
-              <div class="productfoot">
-                <span class="price">₹499</span>
-                <a class="textlink" href="contact.html">Enquire ↗</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="product">
-            <img src="https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&fit=crop&w=1000&q=85" alt="Floral Chandbali">
-            <div class="productbody">
-              <span class="tag">Bestseller</span>
-              <h3>Floral Chandbali</h3>
-              <p>Dramatic festive statement earrings with cluster drops.</p>
-              <div class="productfoot">
-                <span class="price">₹999</span>
-                <a class="textlink" href="contact.html">Enquire ↗</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="product">
-            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=85" alt="Everyday Minimal Hoops">
-            <div class="productbody">
-              <span class="tag">Bestseller</span>
-              <h3>Everyday Minimal Hoops</h3>
-              <p>Clean modern hoops that elevate casual everyday looks.</p>
-              <div class="productfoot">
-                <span class="price">₹399</span>
-                <a class="textlink" href="contact.html">Enquire ↗</a>
+                <span class="price">₹2,499</span>
+                <a class="textlink" href="contact.html">Order bundle ↗</a>
               </div>
             </div>
           </article>
@@ -185,13 +227,15 @@
       </div>
     </section>
 
+    <!-- Jewellery Care & Longevity Guide (Point 9: Rich lines and content) -->
     <section class="section container">
-      <div class="banner">
+      <div class="banner" style="background:linear-gradient(110deg,#4a2233,#84475a);">
         <div>
-          <h2 style="font:600 36px 'Playfair Display'">Your next favourite is waiting.</h2>
-          <p>Find a piece that feels unmistakably you.</p>
+          <span class="eyebrow" style="color:#ffe0e7">Care & longevity guide</span>
+          <h2 style="font:600 34px 'Playfair Display';margin:10px 0;">Keep your sparkle shining for years.</h2>
+          <p>Store in airtight pouches, avoid direct spray of perfumes and moisture, and gently wipe with microfiber cloths after celebrations. Every order includes our complimentary signature velvet preservation pouch.</p>
         </div>
-        <a class="btn" href="shop.html">Shop now</a>
+        <a class="btn" href="contact.html">Styling consultation</a>
       </div>
     </section>
   </main>
@@ -206,7 +250,7 @@
           <p>Everyday adornments, celebration-ready sparkle. Discover thoughtfully curated imitation jewellery and bangles for every story.</p>
           <div class="social-icons" style="margin-top:16px;">
             <a class="social-icon-btn" href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
-              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+              <svg class="stroke-svg" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
             </a>
             <a class="social-icon-btn" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
               <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>

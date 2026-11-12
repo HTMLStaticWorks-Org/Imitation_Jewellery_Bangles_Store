@@ -17,6 +17,15 @@
       <a class="logo" href="index.html">
         <img src="assets/favicon.svg" alt="Lustre Lane logo" class="brandlogo">Lustre <span>Lane.</span>
       </a>
+
+      <!-- Hamburger Menu Toggle (Point 19) -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Navlinks: Removed Account page link (Point 1) -->
       <nav class="navlinks">
         <a class="" href="index.html">Home1</a>
         <a class="" href="home2.html">Home2</a>
@@ -24,8 +33,8 @@
         <a class="" href="collections.html">Collections</a>
         <a class="" href="about.html">About</a>
         <a class="" href="contact.html">Contact</a>
-        <a href="login.html">Account</a>
       </nav>
+
       <div class="navtools">
         <button class="iconbtn" onclick="toggleRTL()" data-rtl-label>RTL</button>
         <button class="iconbtn" onclick="toggleTheme()" aria-label="Toggle theme" data-theme-icon>☾</button>
@@ -34,16 +43,43 @@
     </div>
   </header>
 
+  <!-- Hero Section with Sub-Context and Unified Width (Point 10) -->
   <div class="pagehead container">
     <span class="eyebrow">The jewellery room</span>
     <h1>Shop all pieces</h1>
-    <p>Browse bangles, earrings, necklaces and finishing touches for every occasion.</p>
+    <p>Browse our complete showcase of handcrafted bangles, statement chokers, temple earrings and everyday accents. Each creation is finished with long-lasting anti-tarnish protection and designed for effortless celebration.</p>
+    <div class="pagehead-stats">
+      <span class="pagehead-stat">✦ 250+ Handcrafted Designs</span>
+      <span class="pagehead-stat">❖ 24K Micron Gold Plated</span>
+      <span class="pagehead-stat">🛡 100% Skin Safe & Nickel-Free</span>
+      <span class="pagehead-stat">📦 Free Shipping Over ₹1,499</span>
+    </div>
   </div>
 
   <main class="container section" style="padding-top:10px;">
+    <!-- SECTION 1 (Point 11): Interactive Filter & Category Bar -->
+    <div class="filter-bar">
+      <div class="filter-pills">
+        <button class="filter-pill active" data-filter="all">All Pieces</button>
+        <button class="filter-pill" data-filter="bangles">Bangles & Kadas</button>
+        <button class="filter-pill" data-filter="earrings">Earrings</button>
+        <button class="filter-pill" data-filter="necklaces">Necklaces & Sets</button>
+        <button class="filter-pill" data-filter="under1000">Under ₹999</button>
+      </div>
+      <div class="filter-sort">
+        <select aria-label="Sort products">
+          <option>Sort by: Featured</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+          <option>Customer Rating</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Main Products Catalogue Grid (Card headings centered - Point 18) -->
     <div class="products">
-      <article class="product">
-        <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1000&q=85" alt="Rose Gold Kundan Set">
+      <article class="product" data-category="necklaces">
+        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1000&q=85" alt="Rose Gold Kundan Set">
         <div class="productbody">
           <span class="tag">Bestseller</span>
           <h3>Rose Gold Kundan Set</h3>
@@ -55,8 +91,8 @@
         </div>
       </article>
 
-      <article class="product">
-        <img src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?auto=format&fit=crop&w=1000&q=85" alt="Pearl Bloom Bangles">
+      <article class="product" data-category="bangles under1000">
+        <img src="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&w=1000&q=85" alt="Pearl Bloom Bangles">
         <div class="productbody">
           <span class="tag">Bestseller</span>
           <h3>Pearl Bloom Bangles</h3>
@@ -68,8 +104,8 @@
         </div>
       </article>
 
-      <article class="product">
-        <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=1000&q=85" alt="Temple Charm Earrings">
+      <article class="product" data-category="earrings under1000">
+        <img src="https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?auto=format&fit=crop&w=1000&q=85" alt="Temple Charm Earrings">
         <div class="productbody">
           <span class="tag">Bestseller</span>
           <h3>Temple Charm Earrings</h3>
@@ -81,8 +117,8 @@
         </div>
       </article>
 
-      <article class="product">
-        <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=1000&q=85" alt="Blush Stone Bracelet">
+      <article class="product" data-category="bangles under1000">
+        <img src="https://images.unsplash.com/photo-1576053139778-7e32f2ae3cfd?auto=format&fit=crop&w=1000&q=85" alt="Blush Stone Bracelet">
         <div class="productbody">
           <span class="tag">Bestseller</span>
           <h3>Blush Stone Bracelet</h3>
@@ -94,7 +130,7 @@
         </div>
       </article>
 
-      <article class="product">
+      <article class="product" data-category="necklaces">
         <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=85" alt="Classic Polki Choker">
         <div class="productbody">
           <span class="tag">Bestseller</span>
@@ -107,7 +143,7 @@
         </div>
       </article>
 
-      <article class="product">
+      <article class="product" data-category="bangles under1000">
         <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=85" alt="Golden Glass Bangles">
         <div class="productbody">
           <span class="tag">Bestseller</span>
@@ -120,7 +156,7 @@
         </div>
       </article>
 
-      <article class="product">
+      <article class="product" data-category="earrings under1000">
         <img src="https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&fit=crop&w=1000&q=85" alt="Floral Chandbali">
         <div class="productbody">
           <span class="tag">Bestseller</span>
@@ -133,7 +169,7 @@
         </div>
       </article>
 
-      <article class="product">
+      <article class="product" data-category="earrings under1000">
         <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=85" alt="Everyday Minimal Hoops">
         <div class="productbody">
           <span class="tag">Bestseller</span>
@@ -146,6 +182,137 @@
         </div>
       </article>
     </div>
+
+    <!-- SECTION 2 (Point 11): Trending This Week / Curated Spotlights -->
+    <section class="section" style="padding-bottom:20px;">
+      <div class="sectionhead">
+        <span class="eyebrow">Spotlight picks</span>
+        <h2>Trending styling edits this week</h2>
+        <p>Three statement looks currently captivating our community of brides and jewellery collectors.</p>
+      </div>
+      <div class="categories">
+        <div class="category">
+          <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1000&q=85" alt="Jaipur Royal Bridal Set">
+          <div>
+            <h3>Jaipur Royal Bridal Set</h3>
+            <p>Elaborate uncut kundan choker, matching jhumkas and maang tikka in heritage gold plating.</p>
+            <a class="card-cta" href="contact.html">Enquire on set →</a>
+          </div>
+        </div>
+
+        <div class="category">
+          <img src="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&w=1000&q=85" alt="Chooda & Kada Fusion Stack">
+          <div>
+            <h3>Chooda & Kada Fusion Stack</h3>
+            <p>16-piece celebration set combining traditional ruby glass with openable screw kadas.</p>
+            <a class="card-cta" href="contact.html">Enquire on set →</a>
+          </div>
+        </div>
+
+        <div class="category">
+          <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=1000&q=85" alt="Temple Lakshmi Jhumka Duo">
+          <div>
+            <h3>Temple Lakshmi Jhumka Duo</h3>
+            <p>Deep south Indian matte gold finishing accented by delicate hanging ruby beads.</p>
+            <a class="card-cta" href="contact.html">Enquire on set →</a>
+          </div>
+        </div>
+
+        <div class="category">
+          <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=1000&q=85" alt="Blush Layered Collar">
+          <div>
+            <h3>Blush Layered Collar</h3>
+            <p>Dainty rose-gold two-tier necklace with solitaire pendant for contemporary wedding wear.</p>
+            <a class="card-cta" href="contact.html">Enquire on set →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3 (Point 11): Bangle Sizing & Measurement Guide -->
+    <section class="section" style="background:var(--soft);border-radius:24px;padding:50px 30px;margin-top:20px;">
+      <div class="sectionhead">
+        <span class="eyebrow">Size & fit guide</span>
+        <h2>Find your perfect bangle size</h2>
+        <p>Ensure your bangles slide on smoothly and stay securely on your wrist with our standardized Indian sizing chart.</p>
+      </div>
+      <div class="sizing-table-wrap" style="background:var(--surface);">
+        <table class="sizing-table">
+          <thead>
+            <tr>
+              <th>Bangle Size</th>
+              <th>Inner Diameter (Inches)</th>
+              <th>Inner Diameter (mm)</th>
+              <th>Hand Circumference (Inches)</th>
+              <th>Fit Recommendation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>2.4 (Small)</b></td>
+              <td>2.25 in</td>
+              <td>57.2 mm</td>
+              <td>7.06 in</td>
+              <td>Petite / Slim wrists</td>
+            </tr>
+            <tr>
+              <td><b>2.6 (Medium)</b></td>
+              <td>2.37 in</td>
+              <td>60.3 mm</td>
+              <td>7.45 in</td>
+              <td>Most popular standard size</td>
+            </tr>
+            <tr>
+              <td><b>2.8 (Large)</b></td>
+              <td>2.50 in</td>
+              <td>63.5 mm</td>
+              <td>7.85 in</td>
+              <td>Comfort fit / Broader hands</td>
+            </tr>
+            <tr>
+              <td><b>2.10 (Extra Large)</b></td>
+              <td>2.62 in</td>
+              <td>66.7 mm</td>
+              <td>8.24 in</td>
+              <td>Relaxed festive stacking fit</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="text-align:center;color:var(--muted);font-size:13px;margin:15px 0 0;">
+        💡 <b>How to measure:</b> Bring your thumb and little finger together as if putting on a bangle, wrap a string around the widest part of your hand, and measure the string against a ruler.
+      </p>
+    </section>
+
+    <!-- SECTION 4 (Point 11): Shopping Assurances & Perks -->
+    <section class="section" style="padding-top:40px;">
+      <div class="sectionhead">
+        <span class="eyebrow">The Lustre Lane promise</span>
+        <h2>Why shop our jewellery</h2>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <div class="emoji icon-style-1">🚚</div>
+          <h3>Free Express Shipping</h3>
+          <p>Complimentary tracked delivery across India on all orders over ₹1,499.</p>
+        </div>
+        <div class="feature">
+          <div class="emoji icon-style-2">✨</div>
+          <h3>Anti-Tarnish Seal</h3>
+          <p>Every piece features a durable protective coat ensuring long-lasting luster.</p>
+        </div>
+        <div class="feature">
+          <div class="emoji icon-style-3">🎁</div>
+          <h3>Luxury Gift Packaging</h3>
+          <p>Delivered in velvet storage pouches inside our signature hard-shell presentation box.</p>
+        </div>
+        <div class="feature">
+          <div class="emoji icon-style-4">🔄</div>
+          <h3>7-Day Easy Exchange</h3>
+          <p>Hassle-free size exchanges and styling assistance whenever you need support.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -158,7 +325,7 @@
           <p>Everyday adornments, celebration-ready sparkle. Discover thoughtfully curated imitation jewellery and bangles for every story.</p>
           <div class="social-icons" style="margin-top:16px;">
             <a class="social-icon-btn" href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
-              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+              <svg class="stroke-svg" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
             </a>
             <a class="social-icon-btn" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
               <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>

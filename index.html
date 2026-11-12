@@ -17,6 +17,15 @@
       <a class="logo" href="index.html">
         <img src="assets/favicon.svg" alt="Lustre Lane logo" class="brandlogo">Lustre <span>Lane.</span>
       </a>
+
+      <!-- Hamburger Menu Toggle (Point 19) -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Navlinks: Removed Account page link (Point 1) -->
       <nav class="navlinks">
         <a class="active" href="index.html">Home1</a>
         <a class="" href="home2.html">Home2</a>
@@ -24,8 +33,8 @@
         <a class="" href="collections.html">Collections</a>
         <a class="" href="about.html">About</a>
         <a class="" href="contact.html">Contact</a>
-        <a href="login.html">Account</a>
       </nav>
+
       <div class="navtools">
         <button class="iconbtn" onclick="toggleRTL()" data-rtl-label>RTL</button>
         <button class="iconbtn" onclick="toggleTheme()" aria-label="Toggle theme" data-theme-icon>☾</button>
@@ -44,11 +53,12 @@
           <a class="btn" href="shop.html">Shop the collection →</a>
           <a class="btn alt" href="collections.html">Explore collections</a>
         </div>
-        <p class="rtl-note">Curated styles · Thoughtful details · Feel-good prices</p>
+        <p class="rtl-note" style="margin-top:14px;">Curated styles · Thoughtful details · Feel-good prices</p>
       </div>
       <img class="heroimg" src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1000&q=85" alt="Elegant gold imitation jewellery styling">
     </section>
 
+    <!-- Categories Section -->
     <section class="section" style="background:var(--soft)">
       <div class="container">
         <div class="sectionhead">
@@ -93,6 +103,7 @@
       </div>
     </section>
 
+    <!-- Loved Right Now Products (Fixed Point 2: First 4 cards have unique non-repeated images) -->
     <section class="section container">
       <div class="sectionhead">
         <span class="eyebrow">Loved right now</span>
@@ -100,12 +111,13 @@
         <p>Easy-to-style treasures, chosen by our community.</p>
       </div>
       <div class="products">
+        <!-- Product 1: Distinct image photo-1515562141207-7a88fb7ce338 (Point 2) -->
         <article class="product">
-          <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1000&q=85" alt="Rose Gold Kundan Set">
+          <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1000&q=85" alt="Rose Gold Kundan Set">
           <div class="productbody">
             <span class="tag">Bestseller</span>
             <h3>Rose Gold Kundan Set</h3>
-            <p>Hand-finished imitation jewellery with sparkling stones.</p>
+            <p>Hand-finished imitation jewellery with sparkling kundan stones.</p>
             <div class="productfoot">
               <span class="price">₹1,299</span>
               <a class="textlink" href="contact.html">Enquire ↗</a>
@@ -113,12 +125,13 @@
           </div>
         </article>
 
+        <!-- Product 2: Distinct image photo-1601121141461-9d6647bca1ed (Point 2) -->
         <article class="product">
-          <img src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?auto=format&fit=crop&w=1000&q=85" alt="Pearl Bloom Bangles">
+          <img src="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&w=1000&q=85" alt="Pearl Bloom Bangles">
           <div class="productbody">
             <span class="tag">Bestseller</span>
             <h3>Pearl Bloom Bangles</h3>
-            <p>Hand-finished imitation jewellery with luminous pearls.</p>
+            <p>Hand-finished imitation jewellery with luminous freshwater pearls.</p>
             <div class="productfoot">
               <span class="price">₹799</span>
               <a class="textlink" href="contact.html">Enquire ↗</a>
@@ -126,12 +139,13 @@
           </div>
         </article>
 
+        <!-- Product 3: Distinct image photo-1535632787350-4e68ef0ac584 (Point 2) -->
         <article class="product">
-          <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=1000&q=85" alt="Temple Charm Earrings">
+          <img src="https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?auto=format&fit=crop&w=1000&q=85" alt="Temple Charm Earrings">
           <div class="productbody">
             <span class="tag">Bestseller</span>
             <h3>Temple Charm Earrings</h3>
-            <p>Traditional heritage design with intricate detailing.</p>
+            <p>Traditional heritage design with intricate matte gold motifs.</p>
             <div class="productfoot">
               <span class="price">₹649</span>
               <a class="textlink" href="contact.html">Enquire ↗</a>
@@ -139,12 +153,13 @@
           </div>
         </article>
 
+        <!-- Product 4: Distinct image photo-1576053139778-7e32f2ae3cfd (Point 2) -->
         <article class="product">
-          <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=1000&q=85" alt="Blush Stone Bracelet">
+          <img src="https://images.unsplash.com/photo-1576053139778-7e32f2ae3cfd?auto=format&fit=crop&w=1000&q=85" alt="Blush Stone Bracelet">
           <div class="productbody">
             <span class="tag">Bestseller</span>
             <h3>Blush Stone Bracelet</h3>
-            <p>Delicate rose-toned stones set in radiant gold finish.</p>
+            <p>Delicate rose-toned stones set in radiant anti-tarnish gold finish.</p>
             <div class="productfoot">
               <span class="price">₹549</span>
               <a class="textlink" href="contact.html">Enquire ↗</a>
@@ -152,12 +167,13 @@
           </div>
         </article>
 
+        <!-- Product 5 -->
         <article class="product">
           <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=85" alt="Classic Polki Choker">
           <div class="productbody">
             <span class="tag">Bestseller</span>
             <h3>Classic Polki Choker</h3>
-            <p>Statement bridal and festive imitation polki necklace.</p>
+            <p>Statement bridal and festive imitation polki necklace with dori.</p>
             <div class="productfoot">
               <span class="price">₹1,899</span>
               <a class="textlink" href="contact.html">Enquire ↗</a>
@@ -165,12 +181,13 @@
           </div>
         </article>
 
+        <!-- Product 6 -->
         <article class="product">
           <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=85" alt="Golden Glass Bangles">
           <div class="productbody">
             <span class="tag">Bestseller</span>
             <h3>Golden Glass Bangles</h3>
-            <p>Vibrant stackable glass and metallic finish bangles.</p>
+            <p>Vibrant stackable glass and metallic finish bangles set.</p>
             <div class="productfoot">
               <span class="price">₹499</span>
               <a class="textlink" href="contact.html">Enquire ↗</a>
@@ -178,12 +195,13 @@
           </div>
         </article>
 
+        <!-- Product 7 -->
         <article class="product">
           <img src="https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&fit=crop&w=1000&q=85" alt="Floral Chandbali">
           <div class="productbody">
             <span class="tag">Bestseller</span>
             <h3>Floral Chandbali</h3>
-            <p>Hand-crafted crescent earrings with pearl drops.</p>
+            <p>Hand-crafted crescent earrings with sparkling pearl drops.</p>
             <div class="productfoot">
               <span class="price">₹999</span>
               <a class="textlink" href="contact.html">Enquire ↗</a>
@@ -191,6 +209,7 @@
           </div>
         </article>
 
+        <!-- Product 8 -->
         <article class="product">
           <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=85" alt="Everyday Minimal Hoops">
           <div class="productbody">
@@ -209,6 +228,7 @@
       </div>
     </section>
 
+    <!-- Celebration Banner -->
     <section class="section container">
       <div class="banner">
         <div>
@@ -220,6 +240,7 @@
       </div>
     </section>
 
+    <!-- Why Lustre Lane: Distinct icon colors in both themes (Point 7) -->
     <section class="section container">
       <div class="sectionhead">
         <span class="eyebrow">Why Lustre Lane</span>
@@ -227,54 +248,88 @@
       </div>
       <div class="features">
         <div class="feature">
-          <div class="emoji">✧</div>
+          <div class="emoji icon-style-1">✧</div>
           <h3>Curated designs</h3>
           <p>Versatile pieces selected to complement your personal style.</p>
         </div>
         <div class="feature">
-          <div class="emoji">♡</div>
+          <div class="emoji icon-style-2">♡</div>
           <h3>Easy on you</h3>
           <p>Beautiful finishing and accessible prices for everyday joy.</p>
         </div>
         <div class="feature">
-          <div class="emoji">✿</div>
+          <div class="emoji icon-style-3">✿</div>
           <h3>Gift-ready</h3>
           <p>Thoughtful packaging for birthdays, weddings and just-because days.</p>
         </div>
         <div class="feature">
-          <div class="emoji">☼</div>
+          <div class="emoji icon-style-4">☼</div>
           <h3>Style support</h3>
           <p>Need help choosing? Our team is happy to guide your look.</p>
         </div>
       </div>
     </section>
 
-    <section class="section container">
+    <!-- Testimonials Section with Author Image & Review Stars positioned above footer (Points 3 & 4) -->
+    <section class="section container" style="padding-top:20px;">
       <div class="sectionhead">
         <span class="eyebrow">Kind words</span>
         <h2>Shine shared by you</h2>
+        <p>Read real stories from our community of jewellery enthusiasts.</p>
       </div>
       <div class="testimonials">
         <div class="quote">
-          <p>“The bangles look lovely stacked together. Such a pretty finishing touch.”</p>
-          <b>— Ananya</b>
+          <div class="stars">★★★★★</div>
+          <p>“The bangles look lovely stacked together. The rose gold finish doesn't fade and feels so comfortable for all-day wear.”</p>
+          <div class="quote-author-wrap">
+            <img class="quote-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Ananya Sharma">
+            <div class="quote-author-info">
+              <h4>Ananya Sharma</h4>
+              <span>Verified Buyer · Bengaluru</span>
+            </div>
+          </div>
         </div>
+
         <div class="quote">
-          <p>“Found the perfect festive set without going over my budget.”</p>
-          <b>— Meera</b>
+          <div class="stars">★★★★★</div>
+          <p>“Found the perfect festive kundan choker without breaking my budget. It looked exactly like real polki at my sister’s wedding!”</p>
+          <div class="quote-author-wrap">
+            <img class="quote-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80" alt="Meera Sundaram">
+            <div class="quote-author-info">
+              <h4>Meera Sundaram</h4>
+              <span>Verified Buyer · Chennai</span>
+            </div>
+          </div>
         </div>
+
         <div class="quote">
-          <p>“Beautiful details and the pieces are so easy to style.”</p>
-          <b>— Diya</b>
+          <div class="stars">★★★★★</div>
+          <p>“Beautiful craftsmanship, hypoallergenic and the packaging was so premium. It arrived in three days in pristine condition.”</p>
+          <div class="quote-author-wrap">
+            <img class="quote-avatar" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=300&q=80" alt="Diya Patel">
+            <div class="quote-author-info">
+              <h4>Diya Patel</h4>
+              <span>Verified Buyer · Ahmedabad</span>
+            </div>
+          </div>
         </div>
+
         <div class="quote">
-          <p>“A lovely place to find gifts that feel special.”</p>
-          <b>— Kavya</b>
+          <div class="stars">★★★★★</div>
+          <p>“The temple charm earrings have such an authentic matte gold feel. Lustre Lane is now my go-to for gifting and celebrations.”</p>
+          <div class="quote-author-wrap">
+            <img class="quote-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Kavya Iyer">
+            <div class="quote-author-info">
+              <h4>Kavya Iyer</h4>
+              <span>Verified Buyer · Mumbai</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer Section (Point 5: Visible social media icons & consistent brand logo size) -->
   <footer class="footer">
     <div class="container">
       <div class="footergrid">
@@ -285,7 +340,7 @@
           <p>Everyday adornments, celebration-ready sparkle. Discover thoughtfully curated imitation jewellery and bangles for every story.</p>
           <div class="social-icons" style="margin-top:16px;">
             <a class="social-icon-btn" href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
-              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+              <svg class="stroke-svg" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
             </a>
             <a class="social-icon-btn" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
               <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>

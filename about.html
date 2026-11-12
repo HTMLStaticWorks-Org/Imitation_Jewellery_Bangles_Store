@@ -17,6 +17,15 @@
       <a class="logo" href="index.html">
         <img src="assets/favicon.svg" alt="Lustre Lane logo" class="brandlogo">Lustre <span>Lane.</span>
       </a>
+
+      <!-- Hamburger Menu Toggle (Point 19) -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Navlinks: Removed Account page link (Point 1) -->
       <nav class="navlinks">
         <a class="" href="index.html">Home1</a>
         <a class="" href="home2.html">Home2</a>
@@ -24,8 +33,8 @@
         <a class="" href="collections.html">Collections</a>
         <a class="active" href="about.html">About</a>
         <a class="" href="contact.html">Contact</a>
-        <a href="login.html">Account</a>
       </nav>
+
       <div class="navtools">
         <button class="iconbtn" onclick="toggleRTL()" data-rtl-label>RTL</button>
         <button class="iconbtn" onclick="toggleTheme()" aria-label="Toggle theme" data-theme-icon>☾</button>
@@ -34,45 +43,117 @@
     </div>
   </header>
 
+  <!-- Hero Section with Sub-Context and Unified Width (Point 10) -->
   <div class="pagehead container">
-    <span class="eyebrow">Our story</span>
+    <span class="eyebrow">Our story & heritage</span>
     <h1>A little sparkle, a lot of heart</h1>
-    <p>Lustre Lane celebrates self-expression through accessible, joy-filled adornment.</p>
+    <p>Lustre Lane was founded with a singular conviction: luxury-grade Indian jewellery should be accessible, comfortable and empowering for every occasion, without the fragile worries of traditional gold.</p>
+    <div class="pagehead-stats">
+      <span class="pagehead-stat">✦ Founded in Chennai</span>
+      <span class="pagehead-stat">❖ 100+ Heritage Karigars</span>
+      <span class="pagehead-stat">🌱 Ethical & Recycled Brass</span>
+      <span class="pagehead-stat">✨ 50,000+ Celebrations Adorned</span>
+    </div>
   </div>
 
   <main class="container section" style="padding-top:10px;">
+    <!-- Story Content Grid -->
     <div class="contentgrid">
       <img src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?auto=format&fit=crop&w=1000&q=85" alt="Handcrafted imitation jewellery details">
       <div class="copy">
-        <h2 style="font:600 34px 'Playfair Display'">Style should feel like you.</h2>
+        <h2>Style should feel like you.</h2>
         <p>We believe jewellery is more than an accessory. It is a memory, a mood and a small way to express who you are. Our collection brings together contemporary designs inspired by timeless Indian craftsmanship.</p>
-        <p>From a single everyday bangle to a full celebration look, we want every piece to help you feel confident and beautifully yourself.</p>
-        <a class="btn" href="shop.html">Explore our pieces</a>
+        <p>From a single everyday bangle to a full celebration bridal look, every piece is sculpted to help you feel confident, radiant and beautifully yourself.</p>
+        <p>We work directly with generational artisan clusters across Jaipur, Rajkot and Tamil Nadu, eliminating unnecessary middlemen to deliver authentic karigari directly to your door.</p>
+        <a class="btn" href="shop.html">Explore our pieces →</a>
       </div>
     </div>
 
-    <div class="features" style="margin-top:45px">
+    <!-- Core Brand Values with Distinct Icon Colors in Both Themes (Point 13) -->
+    <div class="features" style="margin-top:50px">
       <div class="feature">
-        <div class="emoji">✧</div>
+        <div class="emoji icon-style-1">✧</div>
         <h3>Our promise</h3>
-        <p>Thoughtful selection and transparent product details.</p>
+        <p>Complete transparency in stone sourcing, plating thickness and metal purity.</p>
       </div>
       <div class="feature">
-        <div class="emoji">♡</div>
+        <div class="emoji icon-style-2">♡</div>
         <h3>Our style</h3>
-        <p>Classic inspiration with a modern, wearable point of view.</p>
+        <p>Classic inspiration with a modern, lightweight and highly wearable point of view.</p>
       </div>
       <div class="feature">
-        <div class="emoji">✿</div>
+        <div class="emoji icon-style-3">✿</div>
         <h3>Our purpose</h3>
-        <p>Make everyday self-expression feel special and accessible.</p>
+        <p>Make festive self-expression feel special, accessible and guilt-free for every woman.</p>
       </div>
       <div class="feature">
-        <div class="emoji">☼</div>
+        <div class="emoji icon-style-4">☼</div>
         <h3>Our people</h3>
-        <p>Friendly support when you need a little styling help.</p>
+        <p>Friendly, attentive customer care and bespoke lehenga-matching styling support.</p>
       </div>
     </div>
+
+    <!-- RELEVANT SECTION 1 (Point 14): Our 4-Stage Ethical Crafting Process -->
+    <section class="section" style="background:var(--soft);border-radius:24px;padding:50px 30px;margin-top:40px;">
+      <div class="sectionhead">
+        <span class="eyebrow">Behind the scenes</span>
+        <h2>Our 4-stage ethical crafting process</h2>
+        <p>How an idea transforms into a radiant piece ready to be cherished for years.</p>
+      </div>
+      <div class="features">
+        <div class="feature" style="background:var(--surface);">
+          <div class="emoji icon-style-1">1</div>
+          <h3>Hand-Drawn Sketches</h3>
+          <p>Concepts drawn by our in-house designers blending historic architectural motifs with modern weight-distribution.</p>
+        </div>
+        <div class="feature" style="background:var(--surface);">
+          <div class="emoji icon-style-2">2</div>
+          <h3>Eco-Brass Mold Forging</h3>
+          <p>Molds are carved by master artisans from recycled, lead-free brass to guarantee durability and sharp crispness.</p>
+        </div>
+        <div class="feature" style="background:var(--surface);">
+          <div class="emoji icon-style-3">3</div>
+          <h3>24K Micron Gold Plating</h3>
+          <p>Triple-layer electroplating baths impart a genuine 24-karat golden sheen that resists tarnishing and dulling.</p>
+        </div>
+        <div class="feature" style="background:var(--surface);">
+          <div class="emoji icon-style-4">4</div>
+          <h3>Stone Setting & Polish</h3>
+          <p>Faux polki and kundan stones are set by hand, followed by a hypoallergenic protective seal for total skin comfort.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELEVANT SECTION 2 (Point 14): Milestones & Artisan Collective -->
+    <section class="section" style="padding-top:40px;">
+      <div class="sectionhead">
+        <span class="eyebrow">Our journey</span>
+        <h2>Milestones & community impact</h2>
+        <p>We are proud to champion fair-wage artisan livelihoods while delighting jewellery lovers across India.</p>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <div class="emoji icon-style-1" style="font-weight:700;font-size:20px;">50k+</div>
+          <h3>Happy Customers</h3>
+          <p>Over fifty thousand customers across 400+ cities in India trust Lustre Lane for their weddings and celebrations.</p>
+        </div>
+        <div class="feature">
+          <div class="emoji icon-style-2" style="font-weight:700;font-size:20px;">1,200+</div>
+          <h3>Original Designs</h3>
+          <p>From petite office hoops to majestic multi-tier royal chokers, our design catalog continues to innovate every month.</p>
+        </div>
+        <div class="feature">
+          <div class="emoji icon-style-3" style="font-weight:700;font-size:20px;">100+</div>
+          <h3>Artisan Families Supported</h3>
+          <p>Direct partnerships with traditional craft clusters provide dignified, stable and fair-wage employment.</p>
+        </div>
+        <div class="feature">
+          <div class="emoji icon-style-4" style="font-weight:700;font-size:20px;">98%</div>
+          <h3>5-Star Customer Rating</h3>
+          <p>Uncompromising commitment to build quality, fast dispatch and responsive customer care.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -85,7 +166,7 @@
           <p>Everyday adornments, celebration-ready sparkle. Discover thoughtfully curated imitation jewellery and bangles for every story.</p>
           <div class="social-icons" style="margin-top:16px;">
             <a class="social-icon-btn" href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
-              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+              <svg class="stroke-svg" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
             </a>
             <a class="social-icon-btn" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
               <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>

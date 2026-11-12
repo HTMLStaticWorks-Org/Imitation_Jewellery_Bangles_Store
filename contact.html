@@ -17,6 +17,15 @@
       <a class="logo" href="index.html">
         <img src="assets/favicon.svg" alt="Lustre Lane logo" class="brandlogo">Lustre <span>Lane.</span>
       </a>
+
+      <!-- Hamburger Menu Toggle (Point 19) -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Navlinks: Removed Account page link (Point 1) -->
       <nav class="navlinks">
         <a class="" href="index.html">Home1</a>
         <a class="" href="home2.html">Home2</a>
@@ -24,8 +33,8 @@
         <a class="" href="collections.html">Collections</a>
         <a class="" href="about.html">About</a>
         <a class="active" href="contact.html">Contact</a>
-        <a href="login.html">Account</a>
       </nav>
+
       <div class="navtools">
         <button class="iconbtn" onclick="toggleRTL()" data-rtl-label>RTL</button>
         <button class="iconbtn" onclick="toggleTheme()" aria-label="Toggle theme" data-theme-icon>☾</button>
@@ -34,10 +43,17 @@
     </div>
   </header>
 
+  <!-- Hero Section with Sub-Context and Unified Width (Point 10) -->
   <div class="pagehead container">
     <span class="eyebrow">We are here to help</span>
     <h1>Let's talk jewellery</h1>
-    <p>Questions about sizing, custom bridal stacks or an order? Send us a note or visit our boutique.</p>
+    <p>Whether you have questions about bangle sizing, require custom lehenga color matching or want to check on an order, our dedicated customer care team in Chennai is delighted to assist you.</p>
+    <div class="pagehead-stats">
+      <span class="pagehead-stat">📍 Usman Road, T. Nagar Boutique</span>
+      <span class="pagehead-stat">⏱ Response Within 2 Business Hours</span>
+      <span class="pagehead-stat">💬 WhatsApp Direct Support</span>
+      <span class="pagehead-stat">💍 Complimentary Bridal Styling</span>
+    </div>
   </div>
 
   <main class="container">
@@ -82,12 +98,12 @@
           </div>
         </div>
 
-        <!-- Social Media Icons Section -->
+        <!-- Social Media Icons Section (Point 5: High contrast in both themes) -->
         <div class="social-group">
           <h4>Follow our sparkle on social media</h4>
           <div class="social-icons">
             <a class="social-icon-btn" href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" title="Follow us on Instagram">
-              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+              <svg class="stroke-svg" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
             </a>
             <a class="social-icon-btn" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" title="Follow us on Facebook">
               <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -107,11 +123,12 @@
 
       <!-- Message Form -->
       <div class="formwrap" style="margin:0;width:100%;max-width:none;">
-        <h2>Send us a message</h2>
+        <span class="eyebrow" style="margin-bottom:6px;">Send us a note</span>
+        <h2>How can we help you?</h2>
         <form data-demo>
           <div class="field">
-            <label>Your name</label>
-            <input required placeholder="Your full name">
+            <label>Your full name</label>
+            <input required placeholder="Your name">
           </div>
           <div class="field">
             <label>Email address</label>
@@ -121,9 +138,9 @@
             <label>What can we help with?</label>
             <select>
               <option>Product & Bangle Sizing Enquiry</option>
+              <option>Custom Bridal Lehenga Matching</option>
               <option>Order Status & Tracking</option>
-              <option>Bridal & Festive Styling Advice</option>
-              <option>Bulk & Gifting Inquiries</option>
+              <option>Bulk Wedding Favours & Gifting</option>
               <option>Other Question</option>
             </select>
           </div>
@@ -151,6 +168,67 @@
         <iframe title="Lustre Lane Boutique Location Map" src="https://maps.google.com/maps?q=Usman+Road,+T.+Nagar,+Chennai,+Tamil+Nadu&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
+
+    <!-- FAQ SECTION (Point 15: Interactive FAQ Accordion) -->
+    <section class="section faq-section">
+      <div class="sectionhead">
+        <span class="eyebrow">Frequently asked questions</span>
+        <h2>Everything you need to know</h2>
+        <p>Quick answers regarding sizing, skin safety, shipping, custom styling and exchanges.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>What bangle sizes do you offer and how do I measure my wrist?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We stock four standard Indian sizes: 2.4 (Small - 57.2mm), 2.6 (Medium - 60.3mm), 2.8 (Large - 63.5mm), and 2.10 (Extra Large - 66.7mm). To measure, bring your thumb and pinky finger together as if putting on a bangle, wrap a piece of string around the widest part of your hand, and measure the string against a ruler. Our size 2.6 fits over 70% of customers comfortably.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Will the imitation gold plating tarnish or turn skin green?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Never. All Lustre Lane jewellery is constructed with recycled brass cores dipped in a triple-layer 24K micron electroplating bath and finished with a clear hypoallergenic resin seal. They are 100% free of nickel, cadmium and lead, making them safe for sensitive skin types.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What are the shipping timelines across India and internationally?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Orders are dispatched within 24 hours from our Chennai facility. Delivery takes 2 to 4 business days for metro cities (Bengaluru, Mumbai, Delhi, Hyderabad, Kolkata) and 3 to 6 business days for other regional pins. All orders over ₹1,499 receive free insured express shipping.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can you match bangles and jewellery to my custom bridal lehenga?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! We offer a complimentary Bespoke Bridal Curation service. Simply message us on WhatsApp (+91 98765 43210) or fill out the enquiry form above with a picture of your lehenga or saree fabric. Our stylists will hand-curate a custom glass, kada and stone stack tailored to your outfit within 4 hours.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What is your exchange and replacement policy?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We offer a hassle-free 7-day exchange window from the date of delivery. If a bangle size does not fit or if you prefer an alternate finish, our team will arrange a doorstep exchange at no extra cost.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -163,7 +241,7 @@
           <p>Everyday adornments, celebration-ready sparkle. Discover thoughtfully curated imitation jewellery and bangles for every story.</p>
           <div class="social-icons" style="margin-top:16px;">
             <a class="social-icon-btn" href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
-              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+              <svg class="stroke-svg" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
             </a>
             <a class="social-icon-btn" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
               <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
