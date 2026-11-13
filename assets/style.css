@@ -60,6 +60,7 @@ body {
   color: var(--text);
   font-family: 'DM Sans', sans-serif;
   transition: background-color .25s ease, color .25s ease;
+  overflow-x: hidden; /* Fix 4: prevent horizontal page slide */
 }
 
 a {
@@ -835,14 +836,15 @@ button:hover, .btn:hover {
   margin-bottom: 24px;
 }
 
+/* Fix 1 & 8: Brand name same size in auth card as everywhere else (24px) */
 .auth-card-brand .logo {
-  font-size: 26px;
+  font-size: 24px;
   justify-content: center;
 }
 
 .auth-card-brand .brandlogo {
-  width: 38px;
-  height: 38px;
+  width: 32px;
+  height: 32px;
 }
 
 .auth-card-head {
@@ -862,9 +864,10 @@ button:hover, .btn:hover {
   line-height: 1.6;
 }
 
-/* Social Login Buttons (Point 17) */
+/* Social Login Buttons (Point 17) — now appear below the submit button */
 .social-auth-wrap {
-  margin-bottom: 24px;
+  margin-top: 20px;
+  margin-bottom: 0;
 }
 
 .social-auth-buttons {
@@ -1364,6 +1367,11 @@ button:hover, .btn:hover {
   margin-top: 50px;
 }
 
+/* Fix 1: Ensure footer brand name is same size as navbar (24px) */
+.footer .logo {
+  font: 700 24px 'Playfair Display', serif !important;
+}
+
 .footergrid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -1451,8 +1459,30 @@ button:hover, .btn:hover {
 
 /* 850px & 768px Tablet & Mobile Breakpoint (Point 19: Hamburger Navigation) */
 @media (max-width: 850px) {
+  /* Fix 3: Hamburger layout — logo | navtools+hamburger all on one row */
+  .navinner {
+    flex-wrap: nowrap;
+    padding: 10px 0;
+  }
+
+  /* navtools stays visible to right of hamburger */
+  .navtools {
+    order: 3;
+    margin-left: auto;
+    gap: 8px;
+  }
+
   .nav-toggle {
     display: flex; /* Enable Hamburger */
+    order: 4;
+    margin-left: 8px;
+    flex-shrink: 0;
+  }
+
+  /* Logo stays left */
+  .logo {
+    order: 1;
+    flex-shrink: 0;
   }
 
   .navlinks {
@@ -1473,6 +1503,7 @@ button:hover, .btn:hover {
     transform: translateY(-10px);
     transition: opacity .25s ease, transform .25s ease, visibility .25s ease;
     z-index: 99;
+    order: 2;
   }
 
   .navlinks.open {
@@ -1495,10 +1526,6 @@ button:hover, .btn:hover {
 
   .navlinks a.active::after {
     display: none;
-  }
-
-  .navinner {
-    padding: 10px 0;
   }
 
   .hero {
@@ -1535,6 +1562,47 @@ button:hover, .btn:hover {
 
   .footergrid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Fix 4: Shop sizing table — prevent mobile overflow */
+  .sizing-table-wrap {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .sizing-table {
+    font-size: 13px;
+    min-width: 320px;
+  }
+
+  .sizing-table th,
+  .sizing-table td {
+    padding: 10px 12px;
+  }
+
+  /* Fix 5: FAQ mobile — word break and proper wrapping */
+  .faq-question {
+    font-size: 14px;
+    padding: 14px 18px;
+    word-break: break-word;
+    white-space: normal;
+    gap: 10px;
+  }
+
+  .faq-question span:first-child {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+  }
+
+  .faq-answer {
+    padding: 0 18px;
+    font-size: 14px;
+  }
+
+  .faq-item.active .faq-answer {
+    padding: 0 18px 18px;
   }
 }
 
@@ -1586,8 +1654,14 @@ button:hover, .btn:hover {
     grid-template-columns: 1fr;
   }
 
+  /* Fix 3: Hide sign-up btn on very small screens to fit logo + RTL + hamburger */
   .navtools .btn {
-    padding: 8px 14px;
+    display: none;
+  }
+
+  /* Fix 3: RTL/Theme buttons compact on mobile */
+  .navtools .iconbtn {
+    padding: 8px 12px;
     font-size: 12px;
   }
 
@@ -1599,4 +1673,60 @@ button:hover, .btn:hover {
   .filter-pills {
     justify-content: center;
   }
+
+  /* Fix 4: Sizing table extra compact on very small screens */
+  .sizing-table {
+    font-size: 12px;
+  }
+
+  .sizing-table th,
+  .sizing-table td {
+    padding: 8px 10px;
+  }
+
+  /* Fix 5: FAQ question compact on very small screens */
+  .faq-question {
+    font-size: 13.5px;
+    padding: 12px 16px;
+  }
+
+  .faq-answer {
+    font-size: 13.5px;
+    padding: 0 16px;
+  }
+
+  .faq-item.active .faq-answer {
+    padding: 0 16px 16px;
+  }
+
+  /* Fix 2: About milestone card — ensure number box fits */
+  .milestone-emoji-num {
+    min-width: auto;
+    padding: 6px 12px;
+    width: auto;
+    height: auto;
+    font-size: 18px !important;
+  }
 }
+
+/* Fix 2: Milestone stat badge — number text in colored box, no fixed height constraint */
+.stat-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 22px;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+  min-width: 70px;
+  width: fit-content;
+  line-height: 1.1;
+}
+
+.stat-badge.icon-style-1 { background: var(--icon-1-bg); color: var(--icon-1); }
+.stat-badge.icon-style-2 { background: var(--icon-2-bg); color: var(--icon-2); }
+.stat-badge.icon-style-3 { background: var(--icon-3-bg); color: var(--icon-3); }
+.stat-badge.icon-style-4 { background: var(--icon-4-bg); color: var(--icon-4); }
