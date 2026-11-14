@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
 
 :root {
   --bg: #fffaf7;
@@ -864,7 +864,7 @@ button:hover, .btn:hover {
   line-height: 1.6;
 }
 
-/* Social Login Buttons (Point 17) — now appear below the submit button */
+/* Social Login Buttons (Point 17) â€” now appear below the submit button */
 .social-auth-wrap {
   margin-top: 20px;
   margin-bottom: 0;
@@ -1363,19 +1363,21 @@ button:hover, .btn:hover {
 .footer {
   background: var(--surface);
   border-top: 1px solid var(--line);
-  padding: 48px 0 20px;
-  margin-top: 50px;
+  padding: 60px 0 24px;
+  margin-top: 60px;
 }
 
-/* Fix 1: Ensure footer brand name is same size as navbar (24px) */
+/* Footer brand name same size as navbar (24px) */
 .footer .logo {
   font: 700 24px 'Playfair Display', serif !important;
+  margin-bottom: 14px;
 }
 
 .footergrid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 32px;
+  gap: 40px;
+  align-items: start;
 }
 
 .footer p, .footer a {
@@ -1391,8 +1393,10 @@ button:hover, .btn:hover {
 .footer h4 {
   margin-top: 0;
   margin-bottom: 14px;
-  font-size: 16px;
+  font-size: 15px;
+  font-weight: 700;
   color: var(--text);
+  letter-spacing: .3px;
 }
 
 .copyright {
@@ -1419,80 +1423,36 @@ button:hover, .btn:hover {
   color: var(--muted);
 }
 
-/* Responsive & Breakpoint Rules (Fixes Point 19: Hamburger Menu & Point 20: 1024px CTA Misalignment) */
+/* ============================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================ */
 
-/* 1024px Breakpoint Fix (Point 20) */
+/* 1024px - tablet landscape */
 @media (max-width: 1024px) {
-  .hero {
-    gap: 32px;
-  }
-  .heroactions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  .heroactions .btn {
-    white-space: nowrap;
-    text-align: center;
-  }
-  .banner {
-    padding: 40px;
-    gap: 20px;
-  }
-  .banner .btn {
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-  .productfoot {
-    gap: 8px;
-  }
-  .productfoot .textlink, .productfoot .btn, .card-cta {
-    padding: 8px 14px;
-    font-size: 12.5px;
-  }
-  .categories, .products {
-    gap: 16px;
-  }
+  .hero { gap: 32px; }
+  .heroactions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: flex-start; }
+  .heroactions .btn { white-space: nowrap; }
+  .banner { padding: 40px; gap: 20px; }
+  .banner .btn { white-space: nowrap; flex-shrink: 0; }
+  .productfoot { gap: 8px; }
+  .productfoot .textlink, .productfoot .btn, .card-cta { padding: 8px 14px; font-size: 12.5px; }
+  .categories, .products { gap: 16px; }
 }
 
-/* 850px & 768px Tablet & Mobile Breakpoint (Point 19: Hamburger Navigation) */
+/* 850px - hamburger breakpoint */
 @media (max-width: 850px) {
-  /* Fix 3: Hamburger layout — logo | navtools+hamburger all on one row */
-  .navinner {
-    flex-wrap: nowrap;
-    padding: 10px 0;
-  }
-
-  /* navtools stays visible to right of hamburger */
-  .navtools {
-    order: 3;
-    margin-left: auto;
-    gap: 8px;
-  }
-
-  .nav-toggle {
-    display: flex; /* Enable Hamburger */
-    order: 4;
-    margin-left: 8px;
-    flex-shrink: 0;
-  }
-
-  /* Logo stays left */
-  .logo {
-    order: 1;
-    flex-shrink: 0;
-  }
-
+  /* Navbar: logo left, navtools+hamburger right, navlinks as dropdown */
+  .navinner { flex-wrap: nowrap; padding: 10px 0; position: relative; }
+  .navinner > .logo { order: 1; flex-shrink: 0; }
   .navlinks {
+    order: 2;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     background: var(--surface);
     border-bottom: 2px solid var(--line);
-    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 16px 30px rgba(0,0,0,.12);
     flex-direction: column;
     align-items: stretch;
     gap: 0;
@@ -1500,225 +1460,65 @@ button:hover, .btn:hover {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     transition: opacity .25s ease, transform .25s ease, visibility .25s ease;
-    z-index: 99;
-    order: 2;
+    z-index: 999;
   }
+  .navlinks.open { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0); }
+  .navlinks a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; font-weight: 600; color: var(--text); }
+  .navlinks a:last-child { border-bottom: 0; }
+  .navlinks a.active::after { display: none; }
+  .navtools { order: 3; margin-left: auto; display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+  .nav-toggle { display: flex; order: 4; margin-left: 8px; flex-shrink: 0; }
 
-  .navlinks.open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: translateY(0);
-  }
-
-  .navlinks a {
-    padding: 14px 0;
-    border-bottom: 1px solid var(--line);
-    font-size: 15px;
-    font-weight: 600;
-  }
-
-  .navlinks a:last-child {
-    border-bottom: 0;
-  }
-
-  .navlinks a.active::after {
-    display: none;
-  }
-
-  .hero {
-    grid-template-columns: 1fr;
-    padding: 38px 0;
-    text-align: center;
-  }
-
-  .hero p {
-    margin: 0 auto;
-  }
-
-  .heroactions {
-    justify-content: center;
-  }
-
-  .heroimg {
-    height: 380px;
-    max-width: 480px;
-    margin: auto;
-  }
-
-  .categories, .products, .features, .testimonials {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .contentgrid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footergrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Fix 4: Shop sizing table — prevent mobile overflow */
-  .sizing-table-wrap {
-    max-width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .sizing-table {
-    font-size: 13px;
-    min-width: 320px;
-  }
-
-  .sizing-table th,
-  .sizing-table td {
-    padding: 10px 12px;
-  }
-
-  /* Fix 5: FAQ mobile — word break and proper wrapping */
-  .faq-question {
-    font-size: 14px;
-    padding: 14px 18px;
-    word-break: break-word;
-    white-space: normal;
-    gap: 10px;
-  }
-
-  .faq-question span:first-child {
-    flex: 1;
-    min-width: 0;
-    text-align: left;
-  }
-
-  .faq-answer {
-    padding: 0 18px;
-    font-size: 14px;
-  }
-
-  .faq-item.active .faq-answer {
-    padding: 0 18px 18px;
-  }
+  /* Layout */
+  .hero { grid-template-columns: 1fr; padding: 38px 0; text-align: center; }
+  .hero p { margin: 0 auto; }
+  .heroactions { justify-content: center; }
+  .heroimg { height: 380px; max-width: 480px; margin: auto; }
+  .categories, .products, .features, .testimonials { grid-template-columns: repeat(2, 1fr); }
+  .contentgrid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footergrid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  .sizing-table-wrap { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .sizing-table { font-size: 13px; min-width: 320px; }
+  .sizing-table th, .sizing-table td { padding: 10px 12px; }
+  .faq-question { font-size: 14px; padding: 14px 18px; word-break: break-word; white-space: normal; gap: 10px; }
+  .faq-question span:first-child { flex: 1; min-width: 0; text-align: left; }
+  .faq-answer { padding: 0 18px; font-size: 14px; }
+  .faq-item.active .faq-answer { padding: 0 18px 18px; }
 }
 
-/* Mobile layout for footer social icons – centered and smaller */
+/* 520px - mobile */
 @media (max-width: 520px) {
-  .social-icons {
-    justify-content: center;
-    gap: 8px;
-  }
-  .social-icon-btn {
-    width: 36px;
-    height: 36px;
-  }
-}
-  .topbar {
-    font-size: 11px;
-    padding: 7px 10px;
-  }
-
-  .categories, .products, .features, .testimonials, .footergrid {
-    grid-template-columns: 1fr;
-  }
-
-  .banner {
-    padding: 28px 20px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 18px;
-  }
-
-  .banner .btn {
-    width: 100%;
-  }
-
-  .heroimg {
-    height: 300px;
-  }
-
-  .map-frame-wrap {
-    height: 280px;
-  }
-
-  .map-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .map-header .btn {
-    width: 100%;
-  }
-
-  .auth-card {
-    padding: 30px 20px;
-  }
-
-  .social-auth-buttons {
-    grid-template-columns: 1fr;
-  }
-
-  /* Fix 3: Hide sign-up btn on very small screens to fit logo + RTL + hamburger */
-  .navtools .btn {
-    display: none;
-  }
-
-  /* Fix 3: RTL/Theme buttons compact on mobile */
-  .navtools .iconbtn {
-    padding: 8px 12px;
-    font-size: 12px;
-  }
-
-  .filter-bar {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .filter-pills {
-    justify-content: center;
-  }
-
-  /* Fix 4: Sizing table extra compact on very small screens */
-  .sizing-table {
-    font-size: 12px;
-  }
-
-  .sizing-table th,
-  .sizing-table td {
-    padding: 8px 10px;
-  }
-
-  /* Fix 5: FAQ question compact on very small screens */
-  .faq-question {
-    font-size: 13.5px;
-    padding: 12px 16px;
-  }
-
-  .faq-answer {
-    font-size: 13.5px;
-    padding: 0 16px;
-  }
-
-  .faq-item.active .faq-answer {
-    padding: 0 16px 16px;
-  }
-
-  /* Fix 2: About milestone card — ensure number box fits */
-  .milestone-emoji-num {
-    min-width: auto;
-    padding: 6px 12px;
-    width: auto;
-    height: auto;
-    font-size: 18px !important;
-  }
+  .topbar { font-size: 11px; padding: 7px 10px; }
+  .categories, .products, .features, .testimonials, .footergrid { grid-template-columns: 1fr; }
+  .footergrid { gap: 24px; text-align: center; }
+  .footer .social-icons { justify-content: center; }
+  .social-icons { justify-content: center; gap: 8px; }
+  .social-icon-btn { width: 36px; height: 36px; }
+  .banner { padding: 28px 20px; display: flex; flex-direction: column; text-align: center; gap: 18px; }
+  .banner .btn { width: 100%; }
+  .heroimg { height: 300px; }
+  .map-frame-wrap { height: 280px; }
+  .map-header { flex-direction: column; align-items: flex-start; }
+  .map-header .btn { width: 100%; }
+  .auth-card { padding: 30px 20px; }
+  .social-auth-buttons { grid-template-columns: 1fr; }
+  /* Keep sign-up button visible but compact */
+  .navtools { gap: 6px; }
+  .navtools .btn { padding: 8px 14px; font-size: 12px; white-space: nowrap; }
+  .navtools .iconbtn { padding: 8px 10px; font-size: 12px; }
+  .filter-bar { flex-direction: column; align-items: stretch; }
+  .filter-pills { justify-content: center; }
+  .sizing-table { font-size: 12px; }
+  .sizing-table th, .sizing-table td { padding: 8px 10px; }
+  .faq-question { font-size: 13.5px; padding: 12px 16px; }
+  .faq-answer { font-size: 13.5px; padding: 0 16px; }
+  .faq-item.active .faq-answer { padding: 0 16px 16px; }
 }
 
-/* Fix 2: Milestone stat badge — number text in colored box, no fixed height constraint */
+/* Stat badge - About page milestone numbers */
 .stat-badge {
   display: inline-flex;
   align-items: center;
@@ -1734,7 +1534,6 @@ button:hover, .btn:hover {
   width: fit-content;
   line-height: 1.1;
 }
-
 .stat-badge.icon-style-1 { background: var(--icon-1-bg); color: var(--icon-1); }
 .stat-badge.icon-style-2 { background: var(--icon-2-bg); color: var(--icon-2); }
 .stat-badge.icon-style-3 { background: var(--icon-3-bg); color: var(--icon-3); }
