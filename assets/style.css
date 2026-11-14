@@ -1606,8 +1606,17 @@ button:hover, .btn:hover {
   }
 }
 
-/* 520px Mobile Breakpoint */
+/* Mobile layout for footer social icons – centered and smaller */
 @media (max-width: 520px) {
+  .social-icons {
+    justify-content: center;
+    gap: 8px;
+  }
+  .social-icon-btn {
+    width: 36px;
+    height: 36px;
+  }
+}
   .topbar {
     font-size: 11px;
     padding: 7px 10px;
